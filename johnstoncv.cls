@@ -84,8 +84,7 @@
 	\end{itemize}%
 	\pagebreak[3]%\Needspace*{2.5cm}%
 	\begin{itemize}[label={}, left=0pt .. 0pt, itemsep=0pt, topsep=0pt]%\Needspace*{5ex}%
-	\item{\Large\bfseries\scshape#1}%
-	\pdfbookmark[1]{#1}{#1}%
+	\item\pdfbookmark[1]{#1}{#1}{\Large\bfseries\scshape#1}%
 	\addvspace{\ssskip}%
 	}
 \renewcommand\subsection[1]{%
@@ -93,8 +92,7 @@
 	\end{itemize}%
 	\pagebreak[3]%
 	\begin{itemize}[label={}, left=0pt .. 0pt, itemsep=0pt, parsep=0pt, topsep=0pt]%
-	\item{\normalfont\large\mdseries\scshape#1}%
-	\pdfbookmark[2]{#1}{#1}%
+	\item\pdfbookmark[2]{#1}{#1}{\normalfont\large\mdseries\scshape#1}%
 	\addvspace{\sssskip}%
 	}
 \renewcommand\subsubsection[1]{%
@@ -102,8 +100,7 @@
 	\end{itemize}%
 	\pagebreak[2]%
 	\begin{itemize}[label={}, left=0pt .. 0pt, itemsep=0pt, parsep=0pt, topsep=0pt]%
-	\item{\normalfont\normalsize\mdseries\itshape#1\hspace*{\myhangingindent}}%
-	\pdfbookmark[3]{#1}{#1}%
+	\item\pdfbookmark[3]{#1}{#1}{\normalfont\normalsize\mdseries\itshape#1\hspace*{\myhangingindent}}%
 	%\addvspace{}%
 	}
 \renewcommand\paragraph[1]{%
@@ -111,8 +108,7 @@
 	\end{itemize}%
 	\pagebreak[2]%
 	\begin{itemize}[label={}, left=0pt .. 0pt, itemsep=0pt, parsep=0pt, topsep=0pt, itemindent=-1\myhangingindent, leftmargin=\myhangingindent]%
-	\item{\normalfont\normalsize\mdseries\scshape#1}%
-	\pdfbookmark[4]{#1}{#1}%
+	\item\pdfbookmark[4]{#1}{#1}{\normalfont\normalsize\mdseries\scshape#1}%
 	\hspace*{\myhangingindent}%
 	}
 \renewcommand\subparagraph[1]{%
@@ -120,8 +116,7 @@
 	\pagebreak[2]%
 	\begin{itemize}[label={}, left=0pt .. 0pt, itemsep=0pt, parsep=0pt, topsep=0pt, itemindent=-1\myhangingindent, leftmargin=\myhangingindent]%
 	\null\hspace*{\myhangingindent}%
-	\item{\normalfont\normalsize\mdseries\scshape#1}%
-	\pdfbookmark[5]{#1}{#1}%
+	\item\pdfbookmark[5]{#1}{#1}{\normalfont\normalsize\mdseries\scshape#1}%
 	\hspace*{\myhangingindent}%
 	}
 \makeatother
