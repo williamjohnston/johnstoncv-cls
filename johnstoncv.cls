@@ -8,8 +8,8 @@
 \title{Curriculum Vitae}
 
 %%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Text height of DIV=11, width of DIV=8 
-\RequirePackage[height=203.20mm, width=134.94mm, headheight=13.6pt, footskip=0.06\paperheight]{geometry}
+%Text height of DIV=11, width just barely bigger than DIV=7 (123.37mm)
+\RequirePackage[height=203.20mm, width=125mm, headheight=13.6pt, footskip=0.06\paperheight]{geometry}
 
 \RequirePackage[manualmark,headsepline]{scrlayer-scrpage}
 	\makeatletter
@@ -21,14 +21,8 @@
 
 %%% FONT AND TYPESETTING %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{fontspec}
-	\setmainfont[
-		Ligatures={TeX,Common}, 
-		Numbers={Proportional},
-		BoldFont = * Semibold,
-		ItalicFont = * Italic,
-		BoldItalicFont = * Semibold Italic,
-		SmallCapsFeatures = {BoldFont= * Semibold, BoldItalicFont= * Semibold Italic},
-		]{Libertinus Serif}
+	\setmainfont{Vollkorn}
+	%\setmainfont{Libertinus Serif}% Also very nice
 
 \RequirePackage{microtype}% Typographical adjustments
 \RequirePackage{fontawesome5}% Icons
@@ -53,15 +47,15 @@
 
 % Set ``column'' widths
 \newlength{\leftcolwidth}
-\setlength{\leftcolwidth}{9em}
+\setlength{\leftcolwidth}{7em}
 
 \newlength{\mycolspace}
-\setlength{\mycolspace}{0.75em}
+\setlength{\mycolspace}{1.5em}
 
 % Set hanging indent
 \RequirePackage{hanging}
 \newlength{\myhangingindent}
-\setlength{\myhangingindent}{0.75em}
+\setlength{\myhangingindent}{1.25em}
 \newcommand{\hang}{\hangpara{\myhangingindent}{1}}
 
 \makeatletter
@@ -73,6 +67,8 @@
 \setlength{\ssskip}{2ex \@plus 1ex \@minus .6ex}
 \newlength{\sssskip}
 \setlength{\sssskip}{\myitemskip}
+\newlength{\pskip}
+\setlength{\pskip}{1em}
 \makeatother 
 
 %%% SECTION HEADINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,7 +105,7 @@
 	\pagebreak[2]%
 	\begin{itemize}[label={}, left=0pt .. 0pt, itemsep=0pt, parsep=0pt, topsep=0pt, itemindent=-1\myhangingindent, leftmargin=\myhangingindent]%
 	\item\pdfbookmark[4]{#1}{#1}{\normalfont\normalsize\mdseries\scshape#1}%
-	\hspace*{\myhangingindent}%
+	\hspace*{\pskip}%
 	}
 \renewcommand\subparagraph[1]{%
 	\end{itemize}%
@@ -117,7 +113,7 @@
 	\begin{itemize}[label={}, left=0pt .. 0pt, itemsep=0pt, parsep=0pt, topsep=0pt, itemindent=-1\myhangingindent, leftmargin=\myhangingindent]%
 	\null\hspace*{\myhangingindent}%
 	\item\pdfbookmark[5]{#1}{#1}{\normalfont\normalsize\mdseries\scshape#1}%
-	\hspace*{\myhangingindent}%
+	\hspace*{\pskip}%
 	}
 \makeatother
 
@@ -183,12 +179,11 @@
 \makeatletter
 \renewcommand{\maketitle}{%
 	\thispagestyle{plain}
-	\begin{center}
-	{\huge{\@author}}\\
-	\vspace{2\myitemskip}
-	\textsc{\Large \@title}\\
-	\end{center}	
-	\vspace{2\myitemskip}
+	\vspace*{1\myitemskip}
+	\centering{\huge{\@author}}\\
+	\vspace{2.5\myitemskip}
+	\centering\textsc{\Large \@title}\\
+	\vspace{2.5\myitemskip}
 	}
 \makeatother
 
