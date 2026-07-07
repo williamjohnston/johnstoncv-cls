@@ -130,11 +130,15 @@
 % Source - https://tex.stackexchange.com/a/377231
 \def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
 
+\newcommand{\Link}[1]{%
+	\leavevmode\marginpar{\href{#1}{\footnotesize\faLink}}\relax\hspace*{-0.25em}%
+	}
+
 \newcommand{\PossibleLink}[1]{%
 	\ifempty{#1}
 		\relax%
 	\else
-		\leavevmode\marginpar{\href{#1}{\footnotesize\faLink}}\relax\hspace*{-0.25em}%
+		\Link{#1}%
 	\fi
 	}
 
